@@ -14,6 +14,6 @@ public class RedisConfig {
     @SuppressWarnings("unused")
     public RedisCacheConfiguration cacheConfiguration(){
         return RedisCacheConfiguration.defaultCacheConfig()
-                .entryTtl(Duration.ofSeconds(15));
+                .entryTtl(Duration.ofHours(1));
     }
 }

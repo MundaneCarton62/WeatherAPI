@@ -9,11 +9,12 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class WeatherClient {
 
-    private final RestTemplate restTemplate = new RestTemplate();
-
+    private final RestTemplate restTemplate;
     private final String apiKey;
 
-    public WeatherClient(@Value("${weather.api.key}") String apiKey) {
+    public WeatherClient(RestTemplate restTemplate,
+                         @Value("${weather.api.key}") String apiKey) {
+        this.restTemplate = restTemplate;
         this.apiKey = apiKey;
     }
 

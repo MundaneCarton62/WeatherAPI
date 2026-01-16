@@ -8,6 +8,15 @@ public class Days {
     private double temp;
     private String description;
 
+    @SuppressWarnings("unused")
+    public Days() {
+    }
+
+    public Days(double temp, String description) {
+        this.temp = temp;
+        this.description = description;
+    }
+
     public double getTemp() {
         return temp;
     }

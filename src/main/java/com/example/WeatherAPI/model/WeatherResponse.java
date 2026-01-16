@@ -10,6 +10,16 @@ public class WeatherResponse implements Serializable{
     private String description;
     private String timezone;
 
+    public WeatherResponse() {
+    }
+
+    public WeatherResponse(String fullAddress, String address, double temperature, String description, String timezone) {
+        this.fullAddress = fullAddress;
+        this.address = address;
+        this.temperature = temperature;
+        this.description = description;
+        this.timezone = timezone;
+    }
 
     @SuppressWarnings("unused")
     public double getTemperature() {

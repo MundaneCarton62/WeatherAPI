@@ -14,10 +14,22 @@ public class ExternalWeatherResponse {
 
     private String timezone;
 
+    @SuppressWarnings("unused")
+    public ExternalWeatherResponse() {
+    }
+
+    public ExternalWeatherResponse(List<Days> days, String resolvedAddress, String address, String timezone) {
+        this.days = days;
+        this.resolvedAddress = resolvedAddress;
+        this.address = address;
+        this.timezone = timezone;
+    }
+
     public List<Days> getDays() {
         return days;
     }
 
+    @SuppressWarnings("unused")
     public void setDays(List<Days> days) {
         this.days = days;
     }
@@ -27,6 +39,7 @@ public class ExternalWeatherResponse {
         return resolvedAddress;
     }
 
+    @SuppressWarnings("unused")
     public void setResolvedAddress(String resolvedAddress) {
         this.resolvedAddress = resolvedAddress;
     }
@@ -35,6 +48,7 @@ public class ExternalWeatherResponse {
         return address;
     }
 
+    @SuppressWarnings("unused")
     public void setAddress(String address) {
         this.address = address;
     }
@@ -43,6 +57,7 @@ public class ExternalWeatherResponse {
         return timezone;
     }
 
+    @SuppressWarnings("unused")
     public void setTimezone(String timezone) {
         this.timezone = timezone;
     }
