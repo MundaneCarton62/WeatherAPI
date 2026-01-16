@@ -1,6 +1,8 @@
 package com.example.WeatherAPI.model;
 
-public class WeatherResponse {
+import java.io.Serializable;
+
+public class WeatherResponse implements Serializable{
 
     private String fullAddress;
     private String address;
@@ -27,6 +29,7 @@ public class WeatherResponse {
         this.description = description;
     }
 
+    @SuppressWarnings("unused")
     public String getFullAddress() {
         return fullAddress;
     }
@@ -35,7 +38,7 @@ public class WeatherResponse {
         this.fullAddress = fullAddress;
     }
 
-
+    @SuppressWarnings("unused")
     public String getAddress() {
         return address;
     }
@@ -44,6 +47,7 @@ public class WeatherResponse {
         this.address = address;
     }
 
+    @SuppressWarnings("unused")
     public String getTimezone() {
         return timezone;
     }

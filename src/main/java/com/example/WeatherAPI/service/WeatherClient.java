@@ -1,9 +1,9 @@
 package com.example.WeatherAPI.service;
 
 import com.example.WeatherAPI.model.ExternalWeatherResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.beans.factory.annotation.Value;
 
 
 @Service
@@ -11,8 +11,11 @@ public class WeatherClient {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    @Value("${weather.api.key}")
-    private String apiKey;
+    private final String apiKey;
+
+    public WeatherClient(@Value("${weather.api.key}") String apiKey) {
+        this.apiKey = apiKey;
+    }
 
 
     public ExternalWeatherResponse fetchWeather(String city){
